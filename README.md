@@ -12,7 +12,8 @@ The architecture consists of:
 
 VPC Peering is configured to enable communication between these servers
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/8426fab7-5416-40e1-8718-bca3e6551b17)
+
 
 ## Steps to Set Up VPC Peering
 
@@ -25,13 +26,17 @@ Launch three EC2 instances:
 
 *	DB Server (Located in a different region)
 
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/84c99dfa-9146-4e40-99e1-c2f813925ca2)
 
-![alt text](image-2.png)
 
-![alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/ba6f347f-360e-49bc-b7a1-ee654fbd77f3)
 
-![alt text](image-4.png)
+
+![image](https://github.com/user-attachments/assets/a7f7216c-93a7-4a89-856a-1d64661b2efa)
+
+
+![image](https://github.com/user-attachments/assets/665abd95-ca52-4b27-aa29-68f510ffd333)
+
 
 ### Step 2: Configure Security Groups
 
@@ -52,36 +57,46 @@ Allow all traffic (for testing purposes only, not recommended for production)
 * Green → Web Server
 * Red → DB Server
 
-![alt text](image-5.png)
+![image](https://github.com/user-attachments/assets/4bd6abd9-b098-4fd2-9d75-44837b96a697)
 
-![alt text](image-6.png)
+
+![image](https://github.com/user-attachments/assets/ecb0393e-e107-4d0a-ba89-d708d4a482b5)
+
 
 ### Step 4: Configure Route Tables
 
 * Set up the required route tables for App Server and Web Server
 * Establish the routes to allow communication between them
 
-![alt text](image-7.png)
+![image](https://github.com/user-attachments/assets/7936e8d4-417b-4050-a635-6d71ecb84ffa)
 
-![alt text](image-8.png)
+
+![image](https://github.com/user-attachments/assets/5b062812-57e6-421f-b865-1acc98e3f53c)
+
 
 Now the connection is successful as shown below. Here app server is able to ping the webserver.
 
-![alt text](image-9.png)
+![image](https://github.com/user-attachments/assets/203e7acf-2f94-4716-a2ae-3cb1bb99de5b)
+
+
 
 Similarly web server is able to ping app-server as shown below.
 
-![alt text](image-10.png)
+![image](https://github.com/user-attachments/assets/b7a82ddf-b160-4780-b263-baff3b4988ef)
+
 
 In the same way to establish connection with db server which is located in ohio region from web server and app server which are located in north virginia. This is achieved using the routetables and establish suitable connections. 
 
-![alt text](image-11.png)
+![image](https://github.com/user-attachments/assets/2cc5efeb-04f6-4ca1-9ecf-1b523cab8631)
 
-![alt text](image-12.png)
+
+![image](https://github.com/user-attachments/assets/732f0522-bfae-4f02-bf08-20a9197412b8)
+
 
 The below image shows how db server is able to ping app server. 
 
-![alt text](image-13.png)
+![image](https://github.com/user-attachments/assets/90f784b0-470c-4051-ab33-68591b0ed230)
+
 
 > [!NOTE]
 > Please do not forget to delete all the resourcs like VPC when done.
