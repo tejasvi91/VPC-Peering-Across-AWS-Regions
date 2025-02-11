@@ -102,5 +102,6 @@ The below image shows how db server is able to ping app server.
 > Please do not forget to delete all the resourcs like VPC when done.
 > ALL this can be achieved in AWS free tier account
 
-
+### Conclusion
+This project successfully demonstrates the establishment of VPC Peering across AWS regions to connect web and database servers in different locations. The final setup allows seamless communication between all instances using proper routing and security configurations.
 
